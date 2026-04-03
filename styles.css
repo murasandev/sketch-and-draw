@@ -1,0 +1,16 @@
+.grid-container {
+  border: solid;
+  width: 550px;
+  height: 550px;
+}
+
+.colored-square{
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+}
+
+.row-container{
+  display: flex;
+  
+}
