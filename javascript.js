@@ -1,37 +1,39 @@
 const gridContainer = document.querySelector(".grid-container");
 
-// create a function that creates a box
-// height/width of box = width of container / x number of boxes
-// create a function that sets box color on hover
-
-// create a function that creates a row of boxes
-// create a function that creates multiple rows
-
-function createBox(row){
-  
-}
+const PX_SIZE = 550;
 
 let size = 5;
+let boxDimension = 0;
 
-createGrid(20);
+createGrid(size);
 
-function createGrid(dimensionSize){
-  for (let index = 0; index < dimensionSize; index++) {
-    createRow(dimensionSize);
+function createGrid(squarePerRow){
+  for (let index = 0; index < squarePerRow; index++) {
+    createRow(squarePerRow);
   }
 }
-
-
 
 function createRow(rowSize){
   const rowContainer = document.createElement("div");
   rowContainer.classList.add("row-container");
 
   for (let index = 0; index < rowSize; index++) {
-    const coloredSquare = document.createElement("div");
-    coloredSquare.classList.add("colored-square");
-    rowContainer.appendChild(coloredSquare);
+    createBox(rowContainer);
   }
-
   gridContainer.appendChild(rowContainer);
+}
+
+function createBox(parentContainer){
+  const coloredSquare = document.createElement("div");
+  coloredSquare.classList.add("colored-square");
+
+  getBoxDimension();
+  coloredSquare.style.width = `${boxDimension}px`;
+  coloredSquare.style.height = `${boxDimension}px`;
+
+  parentContainer.appendChild(coloredSquare);
+}
+
+function getBoxDimension(){
+  boxDimension = PX_SIZE / size;
 }

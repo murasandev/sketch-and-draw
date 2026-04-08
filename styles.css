@@ -12,5 +12,8 @@
 
 .row-container{
   display: flex;
-  
+}
+
+.colored-square:hover{
+  background-color: black;
 }
