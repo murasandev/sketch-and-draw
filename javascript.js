@@ -2,10 +2,10 @@ const gridContainer = document.querySelector(".grid-container");
 
 const PX_SIZE = 550;
 
-let size = 5;
+let gridDimension = prompt("How many squares per side?");
 let boxDimension = 0;
 
-createGrid(size);
+createGrid(gridDimension);
 
 function createGrid(squarePerRow){
   for (let index = 0; index < squarePerRow; index++) {
@@ -35,5 +35,5 @@ function createBox(parentContainer){
 }
 
 function getBoxDimension(){
-  boxDimension = PX_SIZE / size;
+  boxDimension = PX_SIZE / gridDimension;
 }
