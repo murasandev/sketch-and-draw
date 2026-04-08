@@ -11,20 +11,23 @@ function createBox(row){
   
 }
 
-createGrid();
-function createGrid(){
-  for (let index = 0; index < 10; index++) {
-    createRow();
+let size = 5;
+
+createGrid(20);
+
+function createGrid(dimensionSize){
+  for (let index = 0; index < dimensionSize; index++) {
+    createRow(dimensionSize);
   }
 }
 
 
 
-function createRow(){
+function createRow(rowSize){
   const rowContainer = document.createElement("div");
   rowContainer.classList.add("row-container");
 
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < rowSize; index++) {
     const coloredSquare = document.createElement("div");
     coloredSquare.classList.add("colored-square");
     rowContainer.appendChild(coloredSquare);
