@@ -10,7 +10,14 @@ const gridContainer = document.querySelector(".grid-container");
 function createBox(row){
   
 }
-createRow();
+
+createGrid();
+function createGrid(){
+  for (let index = 0; index < 10; index++) {
+    createRow();
+  }
+}
+
 
 
 function createRow(){
