@@ -1,3 +1,8 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
 .grid-container {
   border: solid;
   width: 550px;

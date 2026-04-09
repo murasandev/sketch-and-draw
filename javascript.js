@@ -28,6 +28,7 @@ function createBox(parentContainer){
   coloredSquare.classList.add("colored-square");
 
   getBoxDimension();
+  addEventListenerToBox(coloredSquare);
   coloredSquare.style.width = `${boxDimension}px`;
   coloredSquare.style.height = `${boxDimension}px`;
 
@@ -36,4 +37,10 @@ function createBox(parentContainer){
 
 function getBoxDimension(){
   boxDimension = PX_SIZE / gridDimension;
+}
+
+function addEventListenerToBox(box){
+  box.addEventListener("mousedown", (e) =>{
+    box.style.backgroundColor = "Black";
+  })
 }
