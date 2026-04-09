@@ -40,7 +40,7 @@ function getBoxDimension(){
 }
 
 function addEventListenerToBox(box){
-  box.addEventListener("mousedown", (e) =>{
+  box.addEventListener("mouseenter", (e) =>{
     box.style.backgroundColor = "Black";
   })
 }
