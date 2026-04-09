@@ -44,3 +44,15 @@ function addEventListenerToBox(box){
     box.style.backgroundColor = "Black";
   })
 }
+
+const clearBtn = document.querySelector(".clear-btn");
+clearBtn.addEventListener("click", (e) => {
+  clearGrid();
+})
+
+function clearGrid(){
+  console.log("click button");
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+}
