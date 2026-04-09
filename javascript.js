@@ -2,10 +2,10 @@ const gridContainer = document.querySelector(".grid-container");
 
 const PX_SIZE = 550;
 
-let gridDimension = prompt("How many squares per side?");
+let gridDimension = 0;
 let boxDimension = 0;
 
-createGrid(gridDimension);
+
 
 function createGrid(squarePerRow){
   for (let index = 0; index < squarePerRow; index++) {
@@ -51,8 +51,38 @@ clearBtn.addEventListener("click", (e) => {
 })
 
 function clearGrid(){
-  console.log("click button");
   while (gridContainer.firstChild) {
     gridContainer.removeChild(gridContainer.firstChild);
   }
 }
+
+const tenBtn = document.querySelector(".ten-btn");
+tenBtn.addEventListener("click", (e) => {
+  gridDimension = 10; 
+  clearGrid();
+  setGridSize();
+})
+
+const twentyFiveBtn = document.querySelector(".twenty-five-btn");
+twentyFiveBtn.addEventListener("click", (e) =>{
+  gridDimension = 25;
+  clearGrid();
+  setGridSize();
+})
+const fiftyBtn = document.querySelector(".fifty-btn");
+fiftyBtn.addEventListener("click", (e) => {
+  gridDimension = 50;
+  clearGrid();
+  setGridSize();
+})
+const hundredBtn = document.querySelector(".hundred-btn");
+hundredBtn.addEventListener("click", (e) => {
+  gridDimension = 100;
+  clearGrid();
+  setGridSize();
+})
+
+function setGridSize(){
+  createGrid(gridDimension);
+}
+
